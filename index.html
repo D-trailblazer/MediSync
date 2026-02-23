@@ -1,18 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Playbook</title>
+   <title>MediSync</title>
+   <link rel="stylesheet" href="file.css">
+   <link rel="logo" href="./Resources/Logo.svg">
+   <link rel="shortcut icon" href="./Resources/favicon.svg" type="image/x-icon">
 </head>
+
 <body>
-   
+   <main>
+      <nav>
+         <div class="logo">
+            <img src="./Resources/Logo.svg" alt="MediSync Logo">
+         </div>
+         <button id="cta2" class="cta">Features</button>
+      </nav>
+
+      <section class="hero">
+         <div class="hero-left">
+            <span class="tagline" aria-labelledby="tagline">Your Secure <br> Digital Health <br> Passport</span>
+            <p id="rotatingText"></p>
+            <form action="post" class="cta-bar">
+               <input type="email" placeholder="Want a demo? Enter your email to get a link" required>
+               <button type="submit" id="cta1" class="cta" disabled>Request Demo</button>
+            </form>
+         </div>
+
+         <div class="hero-right">
+            <img src="./Resources/mockups/Product Mockup.png" alt="">
+         </div>
+      </section>
+
+      <section class="demo">
+         <p class="page_title">How it works</p>
+         <p class="tagline">Simplify your health records in <br> three simple steps</p>
+
+         <div class="mockups">
+            <div class="mockup active">
+               <div class="image">
+                  <img src="./Resources/mockups/sign up screen.png" alt="">
+               </div>
+               <div class="text">
+                  <span>Step 1</span>
+                  <p class="description">Set up Your Account</p>
+                  <p class="breakdown">
+                     Set up your encrypted digital health profile in minutes.
+                     Your identity becomes the foundation for securely storing and
+                     accessing your medical records anywhere.
+                  </p>
+               </div>
+            </div>
+
+            <div class="mockup duo-features">
+               <div class="images">
+                  <div class="image">
+                     <img src="./Resources/mockups/profile screen.png" alt="">
+                  </div>
+
+                  <div class="image">
+                     <img src="./Resources/mockups/records screen.png" alt="">
+                  </div>
+               </div>
+               <div class="text">
+                  <span>Step 2</span>
+                  <p class="description">Add Your Health Information</p>
+                  <p class="breakdown">
+                     Add allergies, medications, conditions, blood type,
+                     emergency contacts, and upload medical records. Everything stays
+                     securely structured and instantly accessible.
+                  </p>
+               </div>
+            </div>
+
+            <div class="mockup">
+               <div class="image">
+                  <img src="./Resources/mockups/share records screen.png" alt="">
+               </div>
+               <div class="text">
+                  <span>Step 3</span>
+                  <p class="description">Share Instantly</p>
+                  <p class="breakdown">
+                     At your next appointment, skip the paperwork.
+                     With your secure MediSync ID, you can instantly share the right health
+                     records with doctors or emergency teams.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="features">
+         <div class="page-header">
+            <p class="page_title">Features</p>
+            <p class="tagline">Get to Know MediSync</p>
+            <p class="content">All you need in a digital health passport</p>
+         </div>
+
+         <div class="feature-grid">
+            <div class="feature">
+               <h4>Document Upload vault</h4>
+               <p>Keep all your health records safe in one protected place. Upload and organize lab results,
+                  prescriptions, scans, and
+                  reports in a private, encrypted vault. Your complete medical history stays accessible whenever you
+                  need it.
+               </p>
+            </div>
+            <div class="feature">
+               <h4>Basic Health Profile</h4>
+               <p>Have your essential health information ready at all times. Store allergies, medications, blood type,
+                  and conditions
+                  in one secure profile. This reduces repetitive paperwork and lowers the risk of medical errors.
+               </p>
+            </div>
+            <div class="feature">
+               <h4>QR Code For Emergency Access</h4>
+               <p>
+                  Get instant access when every second counts. Your unique QR code allows authorized responders to
+                  securely view
+                  critical health information in emergencies. This helps ensure faster, safer, and more informed care
+                  even when you
+                  cannot communicate.
+               </p>
+            </div>
+
+
+            <div class="feature">
+               <h4>Medication Reminder and Family Profiles</h4>
+               <p>Stay on track with care for yourself and your loved ones. Receive timely medication reminders and
+                  manage multiple
+                  family health profiles from one account. This ensures continuity of care across your household.
+               </p>
+            </div>
+
+            <div class="feature feature--highlight">
+               <h4>AI Note Taker</h4>
+               <img src="<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-lock-icon lucide-folder-lock"><rect width="8" height="5" x="14" y="17" rx="1"/><path d="M10 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v2.5"/><path d="M20 17v-2a2 2 0 1 0-4 0v2"/></svg>" alt="">
+               <p>
+                  Never miss important medical guidance. MediSync’s intelligent assistant captures and organizes key
+                  points from your
+                  medical conversations. It helps you remember diagnoses, instructions, and next steps with clarity and
+                  confidence.
+               </p>
+            </div>
+            <div class="feature">
+               <h4>Local Language integration</h4>
+               <p>
+                  Healthcare that speaks your language. Interact with MediSync in your preferred local language to
+                  improve
+                  understanding, accessibility, and confidence for users in diverse communities.
+               </p>
+            </div>
+
+            <div class="feature feature-centered">
+               <h4>USSD Integration for Feature Phones</h4>
+               <p>
+                  Access your medical records even without a smartphone. With USSD support, basic feature phones can
+                  securely connect
+                  to your health vault. This makes digital healthcare available to everyone.
+               </p>
+            </div>
+         </div>
+      </section>
+   </main>
+   <footer></footer>
+   <script src="script.js"></script>
+   <script src="animations.js"></script>
 </body>
+
 </html>
-echo "# MediSync" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/D-trailblazer/MediSync.git
-git push -u origin main

@@ -55,7 +55,7 @@ function sendConfirmationEmail(email, name){
 
    button.disabled = true;
    button.innerText = "Sending...";
-   button.stlye.opacity="0.7"
+   button.style.opacity="0.7"
 
 
    emailjs.send(

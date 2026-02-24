@@ -1,12 +1,84 @@
-let input =document.querySelector("input");
-let cta = document.getElementById("cta1")
-input.oninput=()=>{
-   setInterval(()=>{
-      cta.style.backgroundColor = "red"
-   },
-   2000)
-   // cta.style.backgroundColor="red"
+const input = document.querySelector("input");
+const cta = document.getElementById("cta1");
+
+
+// change button color when user types
+input.addEventListener("input", () => {
+   cta.style.backgroundColor = "#117a94";
+});
+
+
+// click handler
+cta.addEventListener("click", sendConfirmationEmail);
+
+
+
+function sendConfirmationEmail() {
+
+   const params = receiveEmailAddress();
+
+   if (!params) return;
+
+   // visual feedback
+   cta.disabled = true;
+   cta.textContent = "Sending...";
+   cta.style.backgroundColor = "#228D9A";
+
+
+   emailjs.send(
+      "service_8ooojh2",     
+      "template_i8jbv8i",    
+      {
+         user_email: params.email,
+         user_name: params.name
+      }
+   )
+   .then(() => {
+
+      alert("Confirmation email sent!");
+
+      // reset UI
+      input.value = "";
+      cta.disabled = false;
+      cta.textContent = "Join waitlist";
+      cta.style.backgroundColor = "#117a94";
+
+   })
+   .catch(error => {
+
+      console.error("EmailJS error:", error);
+
+      alert("Failed to send email");
+
+      cta.disabled = false;
+      cta.textContent = "Join waitlist";
+   });
+
 }
+
+
+
+function receiveEmailAddress() {
+
+   const email = input.value.trim();
+
+   if (!email || !email.includes("@")) {
+      alert("Please enter a valid email address");
+      return null;
+   }
+
+   // deduce name from email
+   const formattedName = email
+      .split("@")[0]
+      .replace(/[._-]/g, " ")
+      .replace(/\b\w/g, char => char.toUpperCase());
+
+   return {
+      email: email,
+      name: formattedName
+   };
+}
+
 
 // Rotating text animation
 const rotatingText = document.getElementById("rotatingText");

@@ -23,9 +23,10 @@
          <div class="hero-left">
             <span class="tagline" aria-labelledby="tagline">Your Secure <br> Digital Health <br> Passport</span>
             <p id="rotatingText"></p>
-            <form action="https://formspree.io/f/xnjblnqw" method="POST" class="cta-bar">
-               <input type="email" name="email" placeholder="Want a demo? Enter your email to get a link" required>
+            <form class="cta-bar" id="waitlistForm">
+               <input type="email" name="email" id="emailInput" placeholder="Want a demo? Enter your email to join the waitlist" required>
                <button type="submit" id="cta1" class="cta">Request Demo</button>
+               <span id="emailMessage"></span>
             </form>
          </div>
 

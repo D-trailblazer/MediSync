@@ -72,9 +72,10 @@ function sendConfirmationEmail(email, name){
 
    .then(function(){
 
-      showMessage("You're on the waitlist 🎉", "success");
+      showMessage("You're on the waitlist", "success");
 
       form.reset();
+      formMessage.innerText=" "
 
       button.disabled = false;
       button.style.opacity="1"
@@ -111,7 +112,7 @@ function showMessage(text, type){
       message.style.color = "#117a94";
 
    else
-      message.style.color = "#ff4d4d";
+      message.style.color = "#333";
 
 }
 

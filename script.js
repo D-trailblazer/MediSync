@@ -87,6 +87,7 @@ function sendConfirmationEmail(email, name){
       showMessage("Something went wrong. Try again.", "error");
 
       button.disabled = false;
+      button.style.opcity="1";
       button.innerText = "Request Demo";
 
       console.error(error);

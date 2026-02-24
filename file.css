@@ -7,7 +7,9 @@
 img {
    width: 100%;
 }
-
+#formMessage{
+   margin-bottom: 10px;
+}
 :root {
    --brand-color1: #023668;
    --brand-color2: #228D9A;

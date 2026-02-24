@@ -129,7 +129,7 @@ section[class=hero] {
    span.tagline {
       font-family: rubik one, sans-serif;
       font-size: var(--font-tagline);
-      margin-bottom: 12px;
+      margin-bottom: 24px;
       color: var(--color-white);
    }
 
@@ -140,7 +140,7 @@ section[class=hero] {
       transform: translateY(8px);
       transition: opacity 0.4s ease, transform 0.4s ease;
       margin-bottom: 48px;
-      font-size: 14px;
+      font-size: 15px;
    }
 
    p#rotatingText.show {
@@ -161,7 +161,7 @@ section[class=hero] {
       padding: var(--button-padding);
       padding-left: 20px;
       border-radius: var(--border-radius);
-      font-size: 17px;
+      font-size: 13px;
    }
 
    #cta1 {
